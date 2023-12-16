@@ -152,7 +152,6 @@ img {
 
 .hero-section {
   background-color: #2e2f42;
-  padding: 188px 0;
   text-align: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -261,6 +260,10 @@ img {
 }
 .team-images {
   width: 100%;
+}
+.container-portfolio-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .our-team-title {
   margin-bottom: 72px;
@@ -610,6 +613,11 @@ img {
   .container {
     max-width: 320px;
   }
+  .header-container {
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+  }
+
   .nav-items {
     display: none;
   }
@@ -661,7 +669,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 24px;
     right: 24px;
     cursor: pointer;
@@ -682,7 +690,6 @@ img {
     fill: #ffffff;
   }
   .mobile-menu-list {
-    color: #2e2f42;
     font-family: Roboto;
     font-size: 36px;
     font-style: normal;
@@ -694,7 +701,9 @@ img {
     flex-direction: column;
     gap: 40px;
   }
+
   .mobile-menu-link {
+    color: #2e2f42;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .mobile-menu-link:hover,
@@ -723,30 +732,22 @@ img {
     color: #4d5ae5;
   }
   .hero-section {
-    background-color: #2e2f42;
-    padding: 188px 0;
-    text-align: center;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url('../images/mob-bg.jpg');
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
   .main-title {
-    color: #fff;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
     margin-bottom: 48px;
-    max-width: 169px;
+    max-width: 288px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 72px;
+  }
+  .container-team-section {
+    padding: 96px 0;
   }
   .features-list {
     display: flex;
@@ -761,7 +762,6 @@ img {
     margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 96px;
   }
   .team-list {
     display: flex;
@@ -775,6 +775,7 @@ img {
   .portfolio-list {
     display: flex;
     flex-direction: column;
+    row-gap: 48px;
   }
   .footer {
     display: flex;
@@ -812,11 +813,10 @@ img {
     min-height: 683px;
   }
   .modal-input {
-    width: 256px;
-    height: 58px;
+    width: 100%;
   }
   .modal-comment {
-    width: 256px;
+    width: 100%;
   }
 }
 
@@ -841,10 +841,12 @@ img {
   .mobile-menu-wrapper {
     display: none;
   }
+  .header-container {
+    align-items: center;
+  }
   .dev-address-container {
     font-style: normal;
     text-decoration: none;
-    padding-top: 16px;
   }
   .dev-contacts {
     display: flex;
@@ -859,8 +861,14 @@ img {
     letter-spacing: 0.04em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  .hero-section {
+    padding: 112px 0;
+  }
   .main-title {
     margin-bottom: 36px;
+  }
+  .features-title {
+    text-align: left;
   }
   .features-list {
     display: flex;
@@ -873,11 +881,12 @@ img {
   .features-list-item {
     width: calc((100% - 24px) / 2);
   }
+  .container-team-section {
+    padding: 96px 0;
+  }
   .our-team-title {
-    margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 96px;
   }
   .team-list {
     display: flex;
@@ -903,6 +912,9 @@ img {
     width: calc((100% - 48px) / 2);
   }
   .footer {
+    max-width: 584px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-direction: row;
     column-gap: 24px;
@@ -926,8 +938,8 @@ img {
   }
 }
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
-  screen and (min-resolution: 2dppx) and (min-width: 767px),
-  screen and (min-device-pixel-ratio: 2) and (min-width: 767px) {
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
   .hero-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -941,6 +953,7 @@ img {
   .container {
     max-width: 1158px;
   }
+
   .mobile-menu-btn,
   .mobile-menu-wrapper {
     display: none;
@@ -966,6 +979,13 @@ img {
   }
   .main-title {
     margin-bottom: 48px;
+  }
+  .hero-section {
+    padding: 188px 0;
+  }
+
+  .features-title {
+    text-align: left;
   }
   .features-icons-list {
     width: 264px;
@@ -1005,15 +1025,13 @@ img {
   .list-text {
     font-weight: 400;
   }
-  .container-features {
-    padding-top: 120px;
-    padding-bottom: 120px;
+  .container-team-section {
+    padding: 120px 0;
   }
   .our-team-title {
     margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 120px;
   }
   .team-list {
     display: flex;
@@ -1024,6 +1042,7 @@ img {
     width: calc((100% - 3 * 24px) / 4);
   }
   .container-portfolio-section {
+    padding-top: 120px;
     padding-bottom: 120px;
   }
   .portfolio-list {
@@ -1037,12 +1056,15 @@ img {
   .portfolio-list-item {
     width: calc((100% - 48px) / 3);
   }
-
   .footer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: baseline;
+    column-gap: 0;
+  }
+  .social-media-cont {
+    margin-right: 80px;
   }
   .logo-container {
     margin-right: 120px;
@@ -1057,5 +1079,16 @@ img {
   .modal {
     width: 408px;
     min-height: 584px;
+  }
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2dppx) and (min-width: 1158px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/bg@2x.jpg');
   }
 }
